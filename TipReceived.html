@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>replit</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "carribean-green": "#0AC18E",
+              "parisian-night": "#282B36",
+            },
+            borderRadius: {
+              "3xl": "100rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      .btn {
+        @apply w-48 bg-emerald-500 text-white text-lg font-bold py-4 px-4 rounded-3xl;
+      }
+      .checkmark__circle {
+        stroke-dasharray: 166;
+        stroke-dashoffset: 166;
+        stroke-width: 2;
+        stroke-miterlimit: 10;
+        stroke: #ffffff;
+        fill: none;
+        animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+      }
+
+      .checkmark {
+        width: 155px;
+        height: 155px;
+        border-radius: 50%;
+        display: block;
+        stroke-width: 3;
+        stroke: #0ac18e;
+        stroke-miterlimit: 10;
+        margin: 0px auto 30px;
+        box-shadow: inset 0px 0px 0px #ffffff;
+        animation: fill 0.4s ease-in-out 0.4s forwards,
+          scale 0.3s ease-in-out 0.9s both;
+      }
+
+      .checkmark__check {
+        transform-origin: 50% 50%;
+        stroke-dasharray: 150;
+        stroke-dashoffset: 150;
+        animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+      }
+
+      @keyframes stroke {
+        100% {
+          stroke-dashoffset: 0;
+        }
+      }
+      @keyframes scale {
+        0%,
+        100% {
+          transform: none;
+        }
+        50% {
+          transform: scale3d(1.1, 1.1, 1);
+        }
+      }
+      @keyframes fill {
+        100% {
+          box-shadow: inset 0px 0px 0px 140px #ffffff;
+        }
+      }
+      .text-fadein {
+        opacity: 0;
+        animation-name: fade-in;
+        animation-duration: 2.1s;
+        animation-timing-function: ease-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fade-in {
+        0% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .scale-checkmark {
+        animation-name: shrink;
+        animation-duration: 4s;
+        animation-timing-function: ease-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+      @keyframes shrink {
+        0% {
+          transform: scale(1, 1);
+        }
+        50% {
+          transform: scale(1, 1);
+        }
+        100% {
+          transform: scale(0.5, 0.5) translate(0px, -70vh);
+        }
+      }
+      .text-remainsize {
+        animation-name: grow;
+        animation-duration: 4s;
+        animation-timing-function: ease-out;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+      @keyframes grow {
+        0% {
+          transform: scale (1, 1);
+          opacity: 0;
+        }
+        50% {
+          transform: scale(1, 1);
+          opacity: 1;
+        }
+        100% {
+          transform: scale(1.5, 1.5);
+          margin-top: 10px;
+          opacity: 1;
+        }
+      }
+      .center {
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      .thank-you {
+        animation-name: come-in;
+        animation-duration: 3.25s;
+        animation-timing-function: ease-in;
+        animation-delay: 0s;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: forwards;
+      }
+      @keyframes come-in {
+        0% {
+          opacity: 0;
+        }
+        90% {
+          opacity: 0;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body
+    style="font-family: Roboto, sans-serif"
+    class="bg-carribean-green min-h-screen"
+  >
+    <App
+      class="flex container text-center text-2xl font-medium text-white w-4/5 mx-auto items-center h-screen"
+    >
+      <div class="flex flex-col mx-auto scale-checkmark">
+        <svg
+          class="checkmark"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 52 52"
+        >
+          <circle
+            class="checkmark__circle"
+            cx="26"
+            cy="26"
+            r="25"
+            fill="none"
+          />
+          <path
+            class="checkmark__check"
+            fill="none"
+            d="M14.1 27.2l7.1 7.2 16.7-16.8"
+          />
+        </svg>
+        <p class="text-fadein text-remainsize">Tip Received</p>
+      </div>
+      <div
+        class="center fixed top-[30vh] w-4/5 max-w-[450px] text-center flex-col mx-auto thank-you grid justify-items-center mt-2 mb-4 p-8 bg-white text-parisian-night rounded-xl drop-shadow-xl"
+      >
+        <h3 class="text-2xl mb-4">Thank you!</h3>
+        <p class="text-base font-light mb-4">
+          You will be able to see your memento in CashTokens Web Wallet or in
+          your <nobr>Memento.cash app.</nobr>
+        </p>
+        <div class="mt-4 w-full">
+          <button class="btn !w-full max-w-xl !text-base">
+            <a href="MementoView.html">View Your Memento NFT</a>
+          </button>
+        </div>
+      </div>
+    </App>
+
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "carribean-green": '#0AC18E',
+            "parisian-night": '#282B36',
+          },
+          borderRadius: {
+            "3xl": '100rem',
+          },
+        }
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+
+    .btn {
+      @apply w-48 bg-emerald-500 text-white text-lg font-bold py-4 px-4 rounded-3xl;
+      }
+    .gray-bg {
+      background: rgb(246,246,246);
+    }
+    html {
+      background: rgb(246,246,246);
+    
+    }
+    .split-bg {
+      background: rgb(246,246,246);
+      background: linear-gradient(180deg, rgba(10,193,142,1) 0px, rgba(10,193,142,1) 252px, rgba(246,246,246,1) 252px, rgba(246,246,246,1) 100%);
+      background-repeat: no-repeat;
+    }
+    .my-icon path {
+  fill: #0AC18E;
+}
+    }
+    a.svg {
+  position: relative;
+  display: inline-block;
+}
+    a.svg:after {
+  content: ""; 
+  position: absolute; 
+  top: 0; 
+  right: 0; 
+  bottom: 0; 
+  left: 0;
+}
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family:Roboto, sans-serif;" class="bg-carribean-green min-h-screen">
+  <App class="flex container w-4/5 mx-auto justify-items-center">
+    <div class="grid w-full max-w-[480px] mx-auto justify-items-center">
+      <div class="w-full">
+
+
+
+        <div class="flex flex-col place-item center w-full mt-4">
+          <div class="place-self-start">
+            <a href="Event.html" class="svg">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="#ffffff" class="w-6 h-6 mt-4 ">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+              </svg>
+            </a>
+          </div>
+          <p class="text-2xl text-center text-white font-bold -mt-8">
+            Send Your Tip
+          </p>
+          <p class="w-90 mx-auto mb-8 text-center text-white font-regular">
+            You will automatically receive </br>your Memento NFT
+          </p>
+        </div>
+
+      </div>
+      <ul class="flex flex-col mt-0 mb-4  mx-auto font-bold">
+        <!-- <li class="w-full mx-auto flex items-stretch mt-2 mb-4 ">
+          <div class="flex w-[90%] mr-2 py-2 px-2 bg-white rounded-xl drop-shadow-xl ">
+            <div class="self-center">
+              <img class="" src=Images/QRcode.png alt="logo">
+            </div>
+          </div>
+          <div class="flex flex-col items-center bg-parisian-night drop-shadow-xl rounded-xl p-4">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d"
+              class="w-10 h-10 flex mb-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+
+            <p class="text-amber-300 text-center text-sm font-medium">This is an experimental application. Please don’t
+              gift us your life
+              savings!</p>
+          </div>
+        </li>-->
+        <li class="grid justify-items-center mt-2 mb-4 py-2 bg-white rounded-xl drop-shadow-xl">
+          <div class="flex flex-col place-item-center">
+            <div class="text-lg text-center px-10">
+              <p class="text-carribean-green my-4">Send to Address</p>
+            </div>
+            <div class="self-center w-3/6">
+              <img class="" src=Images/QRcode.png alt="logo">
+            </div>
+            <div class="text-lg text-center font-medium px-16">
+              <p class="break-all font-light mt-4">
+                qrzlnuzl2k8ehq3rgxgqju0gaje3t9x4uc8apvcrvp </p>
+            </div>
+            <div class="place-self-end pb-4 pr-6 -mt-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="#0AC18E" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+              </svg>
+
+            </div>
+          </div>
+        </li>
+        <li class="grid mt-2 py-2 bg-white rounded-xl drop-shadow-xl">
+          <div class="flex flex-col place-item-center">
+            <div class=" text-lg text-center px-10">
+              <p class="text-carribean-green mt-4">Minimum Tip Amount</p>
+              <p class="break-all mt-4 text-3xl">
+                10¢</p>
+                <a href="TipReceived.html">
+              <p class="font-light">
+                0.00000617 BCH</p></a>
+
+            </div>
+            <div class="place-self-end pb-4 pr-6 -mt-4">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="#0AC18E" class="w-6 h-6">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M15.75 17.25v3.375c0 .621-.504 1.125-1.125 1.125h-9.75a1.125 1.125 0 01-1.125-1.125V7.875c0-.621.504-1.125 1.125-1.125H6.75a9.06 9.06 0 011.5.124m7.5 10.376h3.375c.621 0 1.125-.504 1.125-1.125V11.25c0-4.46-3.243-8.161-7.5-8.876a9.06 9.06 0 00-1.5-.124H9.375c-.621 0-1.125.504-1.125 1.125v3.5m7.5 10.375H9.375a1.125 1.125 0 01-1.125-1.125v-9.25m12 6.625v-1.875a3.375 3.375 0 00-3.375-3.375h-1.5a1.125 1.125 0 01-1.125-1.125v-1.5a3.375 3.375 0 00-3.375-3.375H9.75" />
+              </svg>
+
+            </div>
+          </div>
+        </li>
+
+      </ul>
+
+      <!--<div class="sticky bottom-0 py-8 bg-parisian-night grid justify-items-center">
+        <div class="w-4/5 flex items-center mx-auto">
+          
+          <div class="flex flex-col items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#fcd34d"
+              class="w-10 h-10 flex mb-4">
+              <path stroke-linecap="round" stroke-linejoin="round"
+                d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+            </svg>
+
+            <p class="text-amber-300 text-center text-lg">This is an experimental application. Please don’t gift us your life
+              savings!</p>
+          </div>
+        </div>
+   <div class="mt-8 px-12 w-full">
+        <button class="btn border border-amber-300 !bg-parisian-night !w-full max-w-xl !text-amber-300">
+           <a href="index2.html">Got It</a>
+        </button>
+      </div>
+      </div>-->
+
+  </App>
+
+
+  <script src="script.js"></script>
+
+
+</body>
+
+</html>

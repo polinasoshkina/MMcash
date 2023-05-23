@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Event</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              "carribean-green": "#0AC18E",
+              "parisian-night": "#282B36",
+            },
+            borderRadius: {
+              "3xl": "100rem",
+            },
+          },
+        },
+      };
+    </script>
+    <style type="text/tailwindcss">
+      @layer utilities {
+        .content-auto {
+          content-visibility: auto;
+        }
+
+        .btn {
+          @apply w-48 bg-emerald-500 text-white text-lg font-bold py-4 px-4 rounded-3xl;
+        }
+        .gray-bg {
+          background: rgb(246, 246, 246);
+        }
+        html {
+          background: rgb(246, 246, 246);
+        }
+        .split-bg {
+          background: rgb(246, 246, 246);
+          background: linear-gradient(
+            180deg,
+            rgba(10, 193, 142, 1) 0px,
+            rgba(10, 193, 142, 1) 252px,
+            rgba(246, 246, 246, 1) 252px,
+            rgba(246, 246, 246, 1) 100%
+          );
+          background-repeat: no-repeat;
+        }
+        .my-icon path {
+          fill: #0ac18e;
+        }
+      }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body style="font-family: Roboto, sans-serif" class="split-bg min-h-screen">
+    <App class="container flex flex-col w-4/5 max-w-[480px] mx-auto">
+      <div class="flex items-center pt-8 mb-0 mx-auto">
+        <div>
+          <h3 class="text-2xl text-center text-white font-bold mb-8">
+            This is an experimental application
+          </h3>
+        </div>
+      </div>
+      <div
+        class="mb-8 mt-0 min-h-[210px] p-10 bg-parisian-night rounded-xl drop-shadow-xl"
+      >
+        <div class="mb-4 flex text-lg">
+          <div
+            class="grid bg-white w-8 h-8 rounded-full text-center justify-center mr-1"
+          >
+            <p class="leading-8 !font-bold">1</p>
+          </div>
+          <p class="text-white leading-8 !font-light">/5</p>
+        </div>
+        <p class="text-3xl font-bold text-white">
+          We are under
+          <span class="text-carribean-green">no obligation</span> to return any
+          funds sent to us
+        </p>
+      </div>
+
+      <p class="w-full mb-6 text-2xl text-parisian-night font-bold px-6">
+        What will happen if you send a tip of $10,000?
+      </p>
+      <ul class="flex flex-col mt-0 mb-12 px-6 divide-y divide-slate-200">
+        <li
+          class="grid grid-rows-2 grid-flow-col gap-1 pb-4 grid-cols-[40px_auto]"
+        >
+          <input
+            type="radio"
+            id="contactChoice1"
+            name="contact"
+            value="email"
+            class="h-6 w-6 mr-4 peer/option1 row-span-3 appearance-none bg-zinc-300 checked:bg-pink-500 rounded-full"
+          />
+          <div class="peer-checked/option1:block hidden col-span-2 order-last">
+            <div
+              class="grid justify-items-center mt-2 mb-4 py-4 bg-white rounded-xl drop-shadow-xl text-lg text-center text-pink-700 font-bold my-4 -ml-[44px]"
+            >
+              No, you will not! Try again
+            </div>
+          </div>
+
+          <div
+            class="text-lg font-regular leading-6 mb-1 row-span-2 col-span-2"
+          >
+            I’ll be able to get these funds back if sent by mistake
+          </div>
+        </li>
+        <li
+          class="grid grid-rows-1 grid-flow-col gap-1 py-4 grid-cols-[40px_auto]"
+        >
+          <input
+            type="radio"
+            id="contactChoice1"
+            name="contact"
+            value="email"
+            class="grid max-w-6 h-6 w-6 mr-4 peer/option1 row-span-3 appearance-none bg-zinc-300 checked:bg-carribean-green rounded-full"
+          />
+          <div class="peer-checked/option1:block hidden col-span-2 order-last">
+            <div
+              class="grid justify-items-center mt-2 mb-4 py-4 bg-white rounded-xl drop-shadow-xl text-lg text-center text-carribean-green font-bold my-4 px-6 leading-6 -ml-[44px]"
+            >
+              <p class="px-2">
+                Correct! Please don’t send us your life’s savings.
+              </p>
+              <div class="mt-4 w-full">
+                <button class="btn !w-full max-w-xl">
+                  <a href="SendTip.html">Next</a>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div
+            class="text-lg font-regular text-left leading-6 mb-1 row-span-2 col-span-2 grid justify-start"
+          >
+            I’ll never see these funds again
+          </div>
+        </li>
+        <li
+          class="grid grid-rows-2 grid-flow-col gap-1 pt-4 grid-cols-[40px_auto]"
+        >
+          <input
+            type="radio"
+            id="contactChoice1"
+            name="contact"
+            value="email"
+            class="h-6 w-6 mr-4 peer/option1 row-span-3 appearance-none bg-zinc-300 checked:bg-pink-500 rounded-full"
+          />
+          <div class="peer-checked/option1:block hidden col-span-2 order-last">
+            <div
+              class="grid justify-items-center mt-2 mb-4 py-4 bg-white rounded-xl drop-shadow-xl text-lg text-center text-pink-700 font-bold my-4 -ml-[44px]"
+            >
+              No, you will not! Try again
+            </div>
+          </div>
+
+          <div
+            class="text-lg font-regular leading-6 mb-1 row-span-2 col-span-2"
+          >
+            I’ll be able to get these funds back if sent by mistake
+          </div>
+        </li>
+      </ul>
+    </App>
+
+    <script src="script.js"></script>
+  </body>
+</html>
